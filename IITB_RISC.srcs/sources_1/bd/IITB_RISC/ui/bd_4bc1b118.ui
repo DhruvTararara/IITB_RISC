@@ -1,0 +1,220 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "PinnedBlocks":"/Carry_and_Zero_flag_0|",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port clk_0 -pg 1 -lvl 0 -x -910 -y 430 -defaultsOSRD
+preplace port rst_0 -pg 1 -lvl 0 -x -910 -y 460 -defaultsOSRD
+preplace port c_0 -pg 1 -lvl 20 -x 9910 -y 770 -defaultsOSRD
+preplace port z_0 -pg 1 -lvl 20 -x 9910 -y 800 -defaultsOSRD
+preplace portBus R1_0 -pg 1 -lvl 20 -x 9910 -y 260 -defaultsOSRD
+preplace portBus R2_0 -pg 1 -lvl 20 -x 9910 -y 290 -defaultsOSRD
+preplace portBus R3_0 -pg 1 -lvl 20 -x 9910 -y 320 -defaultsOSRD
+preplace portBus R4_0 -pg 1 -lvl 20 -x 9910 -y 390 -defaultsOSRD
+preplace portBus R5_0 -pg 1 -lvl 20 -x 9910 -y 420 -defaultsOSRD
+preplace portBus R6_0 -pg 1 -lvl 20 -x 9910 -y 450 -defaultsOSRD
+preplace portBus R7_0 -pg 1 -lvl 20 -x 9910 -y 480 -defaultsOSRD
+preplace portBus PC_out_0 -pg 1 -lvl 20 -x 9910 -y 620 -defaultsOSRD
+preplace portBus Load_data -pg 1 -lvl 20 -x 9910 -y 890 -defaultsOSRD
+preplace portBus Load_address -pg 1 -lvl 20 -x 9910 -y 920 -defaultsOSRD
+preplace portBus Store_data -pg 1 -lvl 20 -x 9910 -y 1000 -defaultsOSRD
+preplace portBus Store_address -pg 1 -lvl 20 -x 9910 -y 1030 -defaultsOSRD
+preplace portBus R0_0 -pg 1 -lvl 20 -x 9910 -y 220 -defaultsOSRD
+preplace inst PC_0 -pg 1 -lvl 1 -x -670 -y 390 -defaultsOSRD
+preplace inst Sign_Extension_0 -pg 1 -lvl 4 -x 340 -y 570 -defaultsOSRD
+preplace inst Comparator_0 -pg 1 -lvl 9 -x 2920 -y 420 -defaultsOSRD
+preplace inst ALU_Control_unit_0 -pg 1 -lvl 13 -x 5670 -y 760 -defaultsOSRD
+preplace inst Destination_reg_sele_0 -pg 1 -lvl 12 -x 4960 -y 780 -defaultsOSRD
+preplace inst Write_Data_Select_0 -pg 1 -lvl 16 -x 7430 -y 390 -defaultsOSRD
+preplace inst WB_mux_0 -pg 1 -lvl 19 -x 8950 -y 440 -defaultsOSRD
+preplace inst Special_Control_0 -pg 1 -lvl 19 -x 8950 -y 660 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 11 -x 4160 -y 320 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 15 -x 6890 -y 140 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 18 -x 8370 -y 160 -defaultsOSRD
+preplace inst Instruction_Decoder_0 -pg 1 -lvl 3 -x 50 -y 510 -defaultsOSRD
+preplace inst Branch_PC_0 -pg 1 -lvl 10 -x 3490 -y 770 -defaultsOSRD
+preplace inst ALU_0 -pg 1 -lvl 14 -x 6240 -y 410 -defaultsOSRD
+preplace inst ALU_inputs_0 -pg 1 -lvl 13 -x 5670 -y 390 -defaultsOSRD
+preplace inst RB_select_0 -pg 1 -lvl 6 -x 1190 -y 410 -defaultsOSRD
+preplace inst LM_and_SM_unit_0 -pg 1 -lvl 7 -x 1740 -y 1050 -defaultsOSRD
+preplace inst Instruction_Memory_0 -pg 1 -lvl 1 -x -670 -y 620 -defaultsOSRD
+preplace inst Data_memory_0 -pg 1 -lvl 17 -x 7870 -y 410 -defaultsOSRD
+preplace inst Special_2_Control_0 -pg 1 -lvl 10 -x 3490 -y 1610 -defaultsOSRD
+preplace inst Hazard_Detection_Unit_0 -pg 1 -lvl 7 -x 1740 -y 1600 -defaultsOSRD
+preplace inst Registers_0 -pg 1 -lvl 7 -x 1740 -y 440 -defaultsOSRD
+preplace inst ID_RR_PR_0 -pg 1 -lvl 5 -x 760 -y 480 -defaultsOSRD
+preplace inst IF_ID_PR_0 -pg 1 -lvl 2 -x -290 -y 510 -defaultsOSRD
+preplace inst Forwarding_unit_0 -pg 1 -lvl 12 -x 4960 -y 400 -defaultsOSRD
+preplace inst Carry_and_Zero_flag_0 -pg 1 -lvl 7 -x 1740 -y 790 -defaultsOSRD
+preplace inst CZ_Control_Unit_0 -pg 1 -lvl 9 -x 2920 -y 1590 -defaultsOSRD
+preplace inst MEM_WB_PR_0 -pg 1 -lvl 18 -x 8370 -y 520 -defaultsOSRD
+preplace inst EX_MEM_PR_0 -pg 1 -lvl 15 -x 6890 -y 490 -defaultsOSRD
+preplace inst RR_EX_PR_0 -pg 1 -lvl 11 -x 4160 -y 780 -defaultsOSRD
+preplace inst Reg_Write_Control_0 -pg 1 -lvl 12 -x 4960 -y 70 -defaultsOSRD
+preplace inst RR_Control_0 -pg 1 -lvl 10 -x 3490 -y 410 -defaultsOSRD
+preplace inst RR_Forwarding_Unit_0 -pg 1 -lvl 8 -x 2330 -y 420 -defaultsOSRD
+preplace netloc Instruction_Memory_0_instr 1 1 1 -490 570n
+preplace netloc PC_0_PC_plus_2 1 1 1 -480 400n
+preplace netloc IF_ID_PR_0_instr_out 1 2 1 -90 500n
+preplace netloc Instruction_Decoder_0_Imm1 1 3 1 N 560
+preplace netloc Instruction_Decoder_0_Imm2 1 3 2 190 640 560
+preplace netloc Sign_Extension_0_SE_Imm1 1 4 1 480 560n
+preplace netloc Sign_Extension_0_SE_Imm2 1 4 1 470 580n
+preplace netloc Instruction_Decoder_0_cz 1 3 2 200 480 490
+preplace netloc Instruction_Decoder_0_comp 1 3 2 210 490 510
+preplace netloc Instruction_Decoder_0_RC 1 3 2 N 500 500
+preplace netloc Instruction_Decoder_0_RB 1 3 2 190 460 550
+preplace netloc Instruction_Decoder_0_RA 1 3 2 180 470 N
+preplace netloc Instruction_Decoder_0_op 1 3 2 N 440 560
+preplace netloc IF_ID_PR_0_PC_out 1 2 3 -110 380 N 380 540
+preplace netloc IF_ID_PR_0_PC_plus_2_out 1 2 3 -120 340 N 340 550
+preplace netloc ID_RR_PR_0_RA_out 1 5 6 1000 490 1380 620 2110 580 N 580 3200 900 3880
+preplace netloc Registers_0_ra 1 8 3 2610 350 3210 910 N
+preplace netloc Registers_0_rb 1 8 3 2480 490 3170 930 N
+preplace netloc RB_select_0_RB_final 1 6 5 1310 650 2130 640 N 640 N 640 3730
+preplace netloc ID_RR_PR_0_RB_out 1 5 1 1040 390n
+preplace netloc ID_RR_PR_0_op_out 1 5 6 1010 500 1340 630 N 630 N 630 3240 630 3720
+preplace netloc ID_RR_PR_0_Imm2_out 1 5 6 N 550 1330 910 N 910 N 910 3090 990 N
+preplace netloc RR_Control_0_L 1 6 5 1530 1180 NJ 1180 2610 1160 N 1160 3700
+preplace netloc RR_Control_0_S 1 6 5 1540 1190 NJ 1190 2630 1180 N 1180 3690
+preplace netloc LM_and_SM_unit_0_i 1 5 6 1060 270 N 270 2120 200 N 200 3220 180 3720
+preplace netloc Comparator_0_ET 1 9 1 3220 390n
+preplace netloc Comparator_0_LT 1 9 1 3250 410n
+preplace netloc ID_RR_PR_0_PC_out 1 5 6 1010 330 1370 610 N 610 N 610 3220 610 3820
+preplace netloc Registers_0_write_data_rr 1 0 8 -850 260 N 260 N 260 N 260 N 260 N 260 N 260 1910
+preplace netloc RR_Control_0_S3 1 9 2 3340 140 3640
+preplace netloc RR_Control_0_S2 1 9 2 3330 130 3650
+preplace netloc RR_Control_0_S1 1 9 2 3310 20 3670
+preplace netloc ID_RR_PR_0_SE_Imm1_out 1 5 6 1050 280 1340 220 NJ 220 N 220 3290 200 3790
+preplace netloc ID_RR_PR_0_SE_Imm2_out 1 5 5 N 590 1350 600 NJ 600 N 600 3190
+preplace netloc LM_and_SM_unit_0_x 1 6 5 1480 940 2060J 950 N 950 N 950 3650
+preplace netloc ID_RR_PR_0_PC_plus_2_out 1 5 6 960 40 N 40 NJ 40 2540 -20 N -20 3910
+preplace netloc RR_Control_0_ALUSrc1 1 10 1 3870 270n
+preplace netloc RR_Control_0_ALUSrc2 1 10 1 3840 290n
+preplace netloc RR_Control_0_ALUOp 1 10 1 3830 310n
+preplace netloc RR_Control_0_MemRead 1 10 1 3780 350n
+preplace netloc RR_Control_0_MemWrite 1 10 1 3760 370n
+preplace netloc RR_Control_0_RegDst 1 10 1 3770 330n
+preplace netloc RR_Control_0_MemtoReg 1 10 1 3750 390n
+preplace netloc RR_Control_0_branch 1 0 11 -840 240 N 240 N 240 N 240 N 240 970 210 1360 80 N 80 N 80 3060 40 3660
+preplace netloc Branch_PC_0_branch_pc 1 0 11 -870 30 N 30 N 30 N 30 N 30 N 30 N 30 NJ 30 2530 -30 N -30 3680
+preplace netloc ID_RR_PR_0_cz_out 1 5 6 1020 240 N 240 NJ 240 N 240 3120 1030 N
+preplace netloc ID_RR_PR_0_comp_out 1 5 6 990 230 N 230 NJ 230 N 230 3180 1010 N
+preplace netloc RB_select_0_SM_reg 1 6 5 1310 70 NJ 70 N 70 3160 1050 N
+preplace netloc ALU_inputs_0_op_1 1 13 1 5870 360n
+preplace netloc ALU_inputs_0_op_2 1 13 1 5860 380n
+preplace netloc ALU_Control_unit_0_ALU_CB 1 13 1 5900 420n
+preplace netloc Carry_and_Zero_flag_0_c 1 9 5 3270 1460 3860 220 4580 220 5210 130 5910
+preplace netloc RR_EX_PR_0_stall_out 1 11 1 4520 20n
+preplace netloc RR_EX_PR_0_op_out 1 6 9 1490 110 N 110 N 110 3090 60 N 60 4480 900 5360 650 5920 510 6570
+preplace netloc RR_EX_PR_0_cz_out 1 11 2 4570 930 5400
+preplace netloc Reg_Write_Control_0_RegWrite 1 12 3 5120 60 N 60 6410
+preplace netloc ALU_0_alu_out 1 14 1 6420 360n
+preplace netloc RR_EX_PR_0_RA_final_out 1 11 1 4550 320n
+preplace netloc RR_EX_PR_0_RB_final_out 1 11 1 4560 340n
+preplace netloc RR_EX_PR_0_RC_out 1 11 1 4590 780n
+preplace netloc RR_EX_PR_0_SM_reg_out 1 11 1 4610 800n
+preplace netloc Destination_reg_sele_0_RD 1 6 9 1430 -200 N -200 N -200 N -200 N -200 N -200 5190 -90 N -90 6540
+preplace netloc RR_EX_PR_0_RegDst_out 1 11 1 4410 690n
+preplace netloc RR_EX_PR_0_ALUSrc1_out 1 11 2 N 590 5300
+preplace netloc RR_EX_PR_0_ALUSrc2_out 1 11 2 N 610 5130
+preplace netloc RR_EX_PR_0_ALUOp_out 1 11 2 N 630 5130
+preplace netloc RR_EX_PR_0_ra_out 1 11 2 4340 880 5330
+preplace netloc RR_EX_PR_0_rb_out 1 11 2 N 890 5340
+preplace netloc RR_EX_PR_0_SE_Imm1_out 1 11 2 N 910 5350
+preplace netloc RR_EX_PR_0_comp_out 1 11 2 N 970 5370
+preplace netloc Forwarding_unit_0_forwardA 1 12 1 5250 230n
+preplace netloc Forwarding_unit_0_forwardB 1 12 1 5260 250n
+preplace netloc RR_EX_PR_0_PC_plus_2_out 1 11 4 N 570 5140 610 N 610 6530
+preplace netloc RR_EX_PR_0_Imm2_out 1 11 4 N 950 5390 660 N 660 6580
+preplace netloc RR_EX_PR_0_L_out 1 6 9 1450 90 N 90 N 90 3080 50 3930 380 4360 640 5380 640 N 640 6380
+preplace netloc RR_EX_PR_0_S_out 1 6 9 1530 60 N 60 2580 10 N 10 N 10 4370 620 5390 620 5820 560 N
+preplace netloc RR_EX_PR_0_MemRead_out 1 6 9 1460 50 N 50 2550 0 N 0 N 0 4460 -40 5200 0 N 0 6510
+preplace netloc RR_EX_PR_0_MemWrite_out 1 11 4 4540 660 5290 170 5850 620 N
+preplace netloc RR_EX_PR_0_MemtoReg_out 1 11 4 4540 680 5220 50 N 50 6390
+preplace netloc EX_MEM_PR_0_alu_out_out 1 8 10 2680 -100 N -100 N -100 4370 -130 5280 -60 N -60 N -60 7090 310 7580 600 8090
+preplace netloc EX_MEM_PR_0_RD_out 1 6 12 1440 -10 N -10 2490 -130 N -130 N -130 4360 -160 5400 -140 N -140 N -140 7200 540 N 540 8080
+preplace netloc EX_MEM_PR_0_L_out 1 6 12 1420 -20 N -20 2480 -140 N -140 N -140 4340 -170 5310 -150 N -150 N -150 7070 510 7570 550 N
+preplace netloc EX_MEM_PR_0_S_out 1 12 6 5410 140 5830 800 N 800 7130 570 N 570 N
+preplace netloc EX_MEM_PR_0_MemRead_out 1 15 2 7080 500 7600
+preplace netloc EX_MEM_PR_0_MemWrite_out 1 15 2 7170 470 7610
+preplace netloc EX_MEM_PR_0_MemtoReg_out 1 11 7 4610 550 5150 -70 N -70 N -70 7110 560 N 560 8070
+preplace netloc Write_Data_Select_0_write_data 1 16 2 7560 690 N
+preplace netloc EX_MEM_PR_0_ra_out 1 15 1 7130 370n
+preplace netloc EX_MEM_PR_0_rb_out 1 15 1 7140 390n
+preplace netloc Data_memory_0_dm_data 1 8 10 2640 -210 N -210 N -210 N -210 N -210 N -210 N -210 N -210 N -210 8040
+preplace netloc EX_MEM_PR_0_PC_plus_2_out 1 15 3 7150 520 N 520 8020
+preplace netloc EX_MEM_PR_0_Imm2_out 1 12 6 5390 -80 N -80 N -80 7100 290 N 290 8030
+preplace netloc EX_MEM_PR_0_RegWrite_out 1 6 12 1410 0 N 0 2500 -120 N -120 N -120 4390 -150 5290 -130 5890 790 N 790 7090 590 N 590 N
+preplace netloc MEM_WB_PR_0_MemtoReg_out 1 18 1 8630 400n
+preplace netloc MEM_WB_PR_0_alu_out_out 1 6 13 1550 1200 N 1200 2510 1200 N 1200 N 1200 N 1200 N 1200 N 1200 N 1200 N 1200 N 1200 N 1200 8660
+preplace netloc MEM_WB_PR_0_dm_data_out 1 6 13 1570 1170 N 1170 2480 1170 N 1170 N 1170 N 1170 N 1170 N 1170 N 1170 N 1170 N 1170 N 1170 8640
+preplace netloc MEM_WB_PR_0_PC_plus_2_out 1 18 1 8680 390n
+preplace netloc MEM_WB_PR_0_Imm2_out 1 18 1 8670 410n
+preplace netloc MEM_WB_PR_0_RegWrite_out 1 6 13 1470 640 2100 290 N 290 3260 190 N 190 4490 250 5200 100 N 100 6530 220 7120 780 N 780 N 780 8600
+preplace netloc MEM_WB_PR_0_L_out 1 6 13 1520 1360 N 1360 N 1360 3110 1360 N 1360 N 1360 N 1360 N 1360 N 1360 N 1360 N 1360 N 1360 8610
+preplace netloc MEM_WB_PR_0_S_out 1 18 1 8620 530n
+preplace netloc RR_EX_PR_0_x_out 1 9 3 3320 70 N 70 4340
+preplace netloc Special_Control_0_special_wb 1 0 20 -830 250 N 250 N 250 N 250 N 250 980 220 1320 130 2030J 150 N 150 3130 110 3950 150 4560 180 5130 70 N 70 6460 40 N 40 N 40 N 40 N 40 9100
+preplace netloc Special_2_Control_0_special_2 1 6 5 1510 1840 NJ 1840 N 1840 N 1840 3640
+preplace netloc Hazard_Detection_Unit_0_PC_Write 1 0 8 -860 230 N 230 N 230 N 230 N 230 950 200 N 200 1920
+preplace netloc Hazard_Detection_Unit_0_IF_Write 1 1 7 -460 220 N 220 N 220 N 220 940 190 N 190 1930
+preplace netloc Hazard_Detection_Unit_0_ID_Write 1 4 4 570 170 N 170 N 170 1950
+preplace netloc Hazard_Detection_Unit_0_stall 1 7 4 2160 920 N 920 3270 920 3870
+preplace netloc Hazard_Detection_Unit_0_IF_FLUSH 1 1 7 -470 210 N 210 N 210 N 210 930 180 N 180 1940
+preplace netloc Hazard_Detection_Unit_0_ID_FLUSH 1 2 6 -80 200 N 200 560 160 N 160 N 160 1960
+preplace netloc Hazard_Detection_Unit_0_RR_FLUSH 1 7 4 N 1640 2500 1800 N 1800 3900
+preplace netloc Hazard_Detection_Unit_0_EX_FLUSH 1 7 8 N 1660 2550 1780 N 1780 N 1780 N 1780 N 1780 N 1780 6560
+preplace netloc Hazard_Detection_Unit_0_MEM_FLUSH 1 7 11 N 1680 2470 1790 N 1790 N 1790 N 1790 5270 -40 N -40 N -40 N -40 N -40 8090
+preplace netloc xlconstant_0_dout 1 10 2 3940 390 4330
+preplace netloc xlconstant_1_dout 1 14 2 6600 780 7060
+preplace netloc xlconstant_2_dout 1 17 2 8100 770 8550
+preplace netloc ID_RR_PR_0_RC_out1 1 5 6 940 930 NJ 930 NJ 930 N 930 3080 940 3890
+preplace netloc clk_0_1 1 0 18 -890 520 -510 360 N 360 N 360 520 690 N 690 1390 210 N 210 N 210 3230 150 3880 400 4380 540 5240 150 5920 170 6400 210 N 210 7610 300 8050
+preplace netloc rst_0_1 1 0 18 -880 530 -500 370 N 370 N 370 530 700 N 700 1400 670 N 670 N 670 3280 620 3800 410 4470 650 5120 670 N 670 6550 760 7220 580 7590 580 8050
+preplace netloc ALU_inputs_0_ra_final 1 13 2 5840 320 6380
+preplace netloc ALU_inputs_0_rb_final 1 13 2 5820 500 6540
+preplace netloc Registers_0_ra1 1 7 1 2080 340n
+preplace netloc Registers_0_rb1 1 7 1 2050 360n
+preplace netloc RR_Control_0_CWrite 1 10 1 3740 530n
+preplace netloc RR_Control_0_ZWrite 1 10 1 3710 550n
+preplace netloc CZ_Control_Unit_0_Z_final 1 9 3 3060 1720 3850 100 N
+preplace netloc MEM_WB_PR_0_CWrite_out 1 6 13 1550 140 1990 160 2590 -60 N -60 N -60 4420 -90 5130 -30 N -30 N -30 N -30 N -30 N -30 8570
+preplace netloc MEM_WB_PR_0_ZWrite_out 1 6 13 1560 150 1970 180 2600 -40 N -40 N -40 4450 -70 5120 -20 N -20 N -20 N -20 N -20 N -20 8560
+preplace netloc EX_MEM_PR_0_CWrite_out 1 8 10 2650 -190 N -190 N -190 N -190 N -190 N -190 N -190 7210 630 N 630 N
+preplace netloc EX_MEM_PR_0_ZWrite_out 1 8 10 2660 -110 N -110 N -110 4350 -140 5390 -120 5880 770 N 770 7080 650 N 650 N
+preplace netloc RR_EX_PR_0_CWrite_out 1 11 4 N 1030 N 1030 N 1030 6590
+preplace netloc RR_EX_PR_0_ZWrite_out 1 11 4 N 1050 5410 680 N 680 N
+preplace netloc MEM_WB_PR_0_carry_out 1 6 13 1560 1160 N 1160 2530 1150 N 1150 N 1150 N 1150 N 1150 N 1150 N 1150 N 1150 N 1150 N 1150 8540
+preplace netloc EX_MEM_PR_0_carry_out 1 8 10 2690 -90 N -90 N -90 4400 -120 5350 -110 N -110 N -110 7160 670 N 670 N
+preplace netloc ALU_0_carry_out 1 14 1 6370 420n
+preplace netloc RR_EX_PR_0_i_out 1 6 6 1540 100 N 100 N 100 3070 30 N 30 4350
+preplace netloc EX_MEM_PR_0_op_out 1 12 4 5400 -50 N -50 N -50 7080
+preplace netloc EX_MEM_PR_0_PC_out 1 15 3 7140 530 N 530 8060
+preplace netloc RR_EX_PR_0_PC_out 1 11 4 4400 560 5150 630 N 630 6590
+preplace netloc Registers_0_R1 1 7 13 2010J 120 N 120 3100 80 3920 240 N 240 5230 160 N 160 6520 200 7190 260 N 260 N 260 N 260 N
+preplace netloc Registers_0_R2 1 7 13 2040J 130 N 130 3110 90 N 90 4550 210 5140 80 N 80 6470 50 N 50 N 50 N 50 N 50 9200
+preplace netloc Registers_0_R3 1 7 13 2000J 10 2510 -70 N -70 N -70 4410 -100 5240 30 N 30 6440 10 N 10 N 10 N 10 N 10 9220
+preplace netloc Registers_0_R4 1 7 13 2070J 190 N 190 3150 160 3900 230 N 230 5180 90 N 90 6500 80 N 80 N 80 N 80 N 80 9170
+preplace netloc Registers_0_R5 1 7 13 2020J -30 2470 -150 N -150 N -150 4330 -180 N -180 N -180 N -180 N -180 N -180 N -180 N -180 9210
+preplace netloc Registers_0_R6 1 7 13 2060J 140 N 140 3120 100 3810 170 4530 200 5160 110 N 110 6490 70 N 70 N 70 N 70 N 70 9150
+preplace netloc Registers_0_R7 1 7 13 2090J 170 N 170 3140 120 3940 160 4540 190 5170 120 N 120 6480 60 N 60 N 60 N 60 N 60 9160
+preplace netloc MEM_WB_PR_0_PC_out 1 18 2 8650 540 9130
+preplace netloc Carry_and_Zero_flag_0_c1 1 7 13 N 780 2560 -230 N -230 N -230 N -230 N -230 N -230 N -230 N -230 N -230 N -230 N -230 9190
+preplace netloc Carry_and_Zero_flag_0_z 1 7 13 N 800 2570 -220 N -220 N -220 N -220 N -220 N -220 N -220 N -220 N -220 N -220 N -220 9180
+preplace netloc WB_mux_0_write_data1 1 6 14 1570 280 2150 260 N 260 3210 170 3790 180 4500 260 5320 40 N 40 6450 30 N 30 N 30 N 30 N 30 9140
+preplace netloc MEM_WB_PR_0_RD_out1 1 6 14 1500 660 2140 590 N 590 3070 1190 N 1190 4600 920 N 920 N 920 N 920 N 920 N 920 N 920 8630 920 N
+preplace netloc MEM_WB_PR_0_mem_data_out 1 18 2 8590 570 9110
+preplace netloc MEM_WB_PR_0_mem_addr_out 1 18 2 8580 560 9120
+preplace netloc PC_0_PC 1 0 2 -830 540 -490
+preplace netloc Registers_0_R0 1 7 13 1980J 20 2520 -50 N -50 N -50 4440 -80 5230 20 N 20 N 20 N 20 N 20 N 20 N 20 9230
+preplace netloc IF_ID_PR_0_invalid1 1 2 3 -100 350 NJ 350 480
+preplace netloc ID_RR_PR_0_invalid1_out 1 5 6 1030 250 NJ 250 NJ 250 N 250 3300 210 3810
+preplace netloc RR_EX_PR_0_invalid1_out 1 11 4 4510 -60 5210 10 N 10 6430
+preplace netloc EX_MEM_PR_0_invalid1_out 1 8 10 2670 -80 N -80 N -80 4430 -110 5320 -100 N -100 N -100 7180 610 N 610 N
+preplace netloc MEM_WB_PR_0_invalid1_out 1 7 12 2160 550 2620 -10 N -10 N -10 4590 -50 5220 -10 N -10 N -10 N -10 N -10 N -10 8540
+levelinfo -pg 1 -910 -670 -290 50 340 760 1190 1740 2330 2920 3490 4160 4960 5670 6240 6890 7430 7870 8370 8950 9910
+pagesize -pg 1 -db -bbox -sgen -990 -240 10090 1850
+"
+}
+0

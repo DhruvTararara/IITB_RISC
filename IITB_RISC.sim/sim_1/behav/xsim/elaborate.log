@@ -1,0 +1,78 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 325cf005a1844d299e82e8ee4826bf91 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_6 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.IITB_RISC_ALU_0_0
+Compiling module xil_defaultlib.ALU_Control_unit
+Compiling module xil_defaultlib.IITB_RISC_ALU_Control_unit_0_0
+Compiling module xil_defaultlib.ALU_inputs
+Compiling module xil_defaultlib.IITB_RISC_ALU_inputs_0_0
+Compiling module xil_defaultlib.Branch_PC
+Compiling module xil_defaultlib.IITB_RISC_Branch_PC_0_0
+Compiling module xil_defaultlib.CZ_Control_Unit
+Compiling module xil_defaultlib.IITB_RISC_CZ_Control_Unit_0_0
+Compiling module xil_defaultlib.Carry_and_Zero_flag
+Compiling module xil_defaultlib.IITB_RISC_Carry_and_Zero_flag_0_...
+Compiling module xil_defaultlib.Comparator
+Compiling module xil_defaultlib.IITB_RISC_Comparator_0_0
+Compiling module xil_defaultlib.Data_memory
+Compiling module xil_defaultlib.IITB_RISC_Data_memory_0_0
+Compiling module xil_defaultlib.Destination_reg_select
+Compiling module xil_defaultlib.IITB_RISC_Destination_reg_sele_0...
+Compiling module xil_defaultlib.EX_MEM_PR
+Compiling module xil_defaultlib.IITB_RISC_EX_MEM_PR_0_0
+Compiling module xil_defaultlib.Forwarding_unit
+Compiling module xil_defaultlib.IITB_RISC_Forwarding_unit_0_0
+Compiling module xil_defaultlib.Hazard_Detection_Unit
+Compiling module xil_defaultlib.IITB_RISC_Hazard_Detection_Unit_...
+Compiling module xil_defaultlib.ID_RR_PR
+Compiling module xil_defaultlib.IITB_RISC_ID_RR_PR_0_0
+Compiling module xil_defaultlib.IF_ID_PR
+Compiling module xil_defaultlib.IITB_RISC_IF_ID_PR_0_1
+Compiling module xil_defaultlib.Instruction_Decoder
+Compiling module xil_defaultlib.IITB_RISC_Instruction_Decoder_0_...
+Compiling module xil_defaultlib.Instruction_Memory
+Compiling module xil_defaultlib.IITB_RISC_Instruction_Memory_0_0
+Compiling module xil_defaultlib.LM_and_SM_unit
+Compiling module xil_defaultlib.IITB_RISC_LM_and_SM_unit_0_0
+Compiling module xil_defaultlib.MEM_WB_PR
+Compiling module xil_defaultlib.IITB_RISC_MEM_WB_PR_0_0
+Compiling module xil_defaultlib.PC
+Compiling module xil_defaultlib.IITB_RISC_PC_0_0
+Compiling module xil_defaultlib.RB_select
+Compiling module xil_defaultlib.IITB_RISC_RB_select_0_1
+Compiling module xil_defaultlib.RR_Control
+Compiling module xil_defaultlib.IITB_RISC_RR_Control_0_0
+Compiling module xil_defaultlib.RR_EX_PR
+Compiling module xil_defaultlib.IITB_RISC_RR_EX_PR_0_0
+Compiling module xil_defaultlib.RR_Forwarding_Unit
+Compiling module xil_defaultlib.IITB_RISC_RR_Forwarding_Unit_0_0
+Compiling module xil_defaultlib.Reg_Write_Control
+Compiling module xil_defaultlib.IITB_RISC_Reg_Write_Control_0_0
+Compiling module xil_defaultlib.Registers
+Compiling module xil_defaultlib.IITB_RISC_Registers_0_5
+Compiling module xil_defaultlib.Sign_Extension
+Compiling module xil_defaultlib.IITB_RISC_Sign_Extension_0_0
+Compiling module xil_defaultlib.Special_2_Control
+Compiling module xil_defaultlib.IITB_RISC_Special_2_Control_0_0
+Compiling module xil_defaultlib.Special_Control
+Compiling module xil_defaultlib.IITB_RISC_Special_Control_0_0
+Compiling module xil_defaultlib.WB_mux
+Compiling module xil_defaultlib.IITB_RISC_WB_mux_0_0
+Compiling module xil_defaultlib.Write_Data_Select
+Compiling module xil_defaultlib.IITB_RISC_Write_Data_Select_0_0
+Compiling module xlconstant_v1_1_6.xlconstant_v1_1_6_xlconstant(CON...
+Compiling module xil_defaultlib.IITB_RISC_xlconstant_0_0
+Compiling module xil_defaultlib.IITB_RISC_xlconstant_0_1
+Compiling module xil_defaultlib.IITB_RISC_xlconstant_0_2
+Compiling module xil_defaultlib.IITB_RISC
+Compiling module xil_defaultlib.IITB_RISC_wrapper
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav

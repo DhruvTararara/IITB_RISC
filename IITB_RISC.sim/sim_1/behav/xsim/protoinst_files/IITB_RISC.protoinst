@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"IITB_RISC": {
+			"proto_instances": {
+			}
+		}
+	}
+}

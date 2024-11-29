@@ -1,0 +1,2643 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Sep 19 16:56:31 2024" VIVADOVERSION="2019.1">
+
+  <SYSTEMINFO ARCH="kintex7" DEVICE="7k70t" NAME="IITB_RISC" PACKAGE="fbv676" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_0" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PC_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Data_memory_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Special_2_Control_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Registers_0" PORT="clk"/>
+        <CONNECTION INSTANCE="ID_RR_PR_0" PORT="clk"/>
+        <CONNECTION INSTANCE="IF_ID_PR_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="clk"/>
+        <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="clk"/>
+        <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="clk"/>
+        <CONNECTION INSTANCE="RR_EX_PR_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst_0" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PC_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Instruction_Memory_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Data_memory_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Special_2_Control_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Registers_0" PORT="rst"/>
+        <CONNECTION INSTANCE="ID_RR_PR_0" PORT="rst"/>
+        <CONNECTION INSTANCE="IF_ID_PR_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="rst"/>
+        <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="rst"/>
+        <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="rst"/>
+        <CONNECTION INSTANCE="RR_EX_PR_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="R1_0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Registers_0" PORT="R1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="R2_0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Registers_0" PORT="R2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="R3_0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Registers_0" PORT="R3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="R4_0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Registers_0" PORT="R4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="R5_0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Registers_0" PORT="R5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="R6_0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Registers_0" PORT="R6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="R7_0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Registers_0" PORT="R7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="PC_out_0" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_PC_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="PC_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_0" SIGIS="undef" SIGNAME="Carry_and_Zero_flag_0_c">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="c"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="z_0" SIGIS="undef" SIGNAME="Carry_and_Zero_flag_0_z">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="z"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="Load_data" RIGHT="0" SIGIS="undef" SIGNAME="WB_mux_0_write_data">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="WB_mux_0" PORT="write_data"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="Load_address" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RD_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RD_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="Store_data" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_mem_data_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="mem_data_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="Store_address" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_mem_addr_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="mem_addr_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="R0_0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Registers_0" PORT="R0"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ALU_0" HWVERSION="1.0" INSTANCE="ALU_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU" VLNV="xilinx.com:module_ref:ALU:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_ALU_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="op_1" RIGHT="0" SIGIS="undef" SIGNAME="ALU_inputs_0_op_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="op_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="op_2" RIGHT="0" SIGIS="undef" SIGNAME="ALU_inputs_0_op_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="op_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ALU_CB" RIGHT="0" SIGIS="undef" SIGNAME="ALU_Control_unit_0_ALU_CB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_Control_unit_0" PORT="ALU_CB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="CZ_Control_Unit_0_C_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="C_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="alu_out" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_alu_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="alu_out_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="carry_out" SIGIS="undef" SIGNAME="ALU_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="carry_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ALU_Control_unit_0" HWVERSION="1.0" INSTANCE="ALU_Control_unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU_Control_unit" VLNV="xilinx.com:module_ref:ALU_Control_unit:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_ALU_Control_unit_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="ALUOp" SIGIS="undef" SIGNAME="RR_EX_PR_0_ALUOp_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ALUOp_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="opcode" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="cz" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_cz_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="cz_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="ALU_CB" RIGHT="0" SIGIS="undef" SIGNAME="ALU_Control_unit_0_ALU_CB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="ALU_CB"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ALU_inputs_0" HWVERSION="1.0" INSTANCE="ALU_inputs_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALU_inputs" VLNV="xilinx.com:module_ref:ALU_inputs:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_ALU_inputs_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="forwardA" RIGHT="0" SIGIS="undef" SIGNAME="Forwarding_unit_0_forwardA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="forwardA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="forwardB" RIGHT="0" SIGIS="undef" SIGNAME="Forwarding_unit_0_forwardB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="forwardB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ALUSrc1" SIGIS="undef" SIGNAME="RR_EX_PR_0_ALUSrc1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ALUSrc1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ALUSrc2" SIGIS="undef" SIGNAME="RR_EX_PR_0_ALUSrc2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ALUSrc2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="ra" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_ra_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ra_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="rb" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_rb_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="rb_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="SE_Imm1" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_SE_Imm1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="SE_Imm1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="alu_out_mem" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="alu_out_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="Imm2_mem" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="Imm2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="write_data_wb" RIGHT="0" SIGIS="undef" SIGNAME="WB_mux_0_write_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="comp" SIGIS="undef" SIGNAME="RR_EX_PR_0_comp_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="comp_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L" SIGIS="undef" SIGNAME="RR_EX_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S" SIGIS="undef" SIGNAME="RR_EX_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="S_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op_mem" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="S_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="op_1" RIGHT="0" SIGIS="undef" SIGNAME="ALU_inputs_0_op_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="op_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="op_2" RIGHT="0" SIGIS="undef" SIGNAME="ALU_inputs_0_op_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="op_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="ra_final" RIGHT="0" SIGIS="undef" SIGNAME="ALU_inputs_0_ra_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="ra_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="rb_final" RIGHT="0" SIGIS="undef" SIGNAME="ALU_inputs_0_rb_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="rb_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Branch_PC_0" HWVERSION="1.0" INSTANCE="Branch_PC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Branch_PC" VLNV="xilinx.com:module_ref:Branch_PC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Branch_PC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="S3" SIGIS="undef" SIGNAME="RR_Control_0_S3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="S3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S2" SIGIS="undef" SIGNAME="RR_Control_0_S2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="S2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S1" SIGIS="undef" SIGNAME="RR_Control_0_S1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="S1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="SE_Imm1" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_SE_Imm1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="SE_Imm1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="SE_Imm2" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_SE_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="SE_Imm2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="ra" RIGHT="0" SIGIS="undef" SIGNAME="RR_Forwarding_Unit_0_ra_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="ra_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="rb" RIGHT="0" SIGIS="undef" SIGNAME="RR_Forwarding_Unit_0_rb_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="rb_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="branch_pc" RIGHT="0" SIGIS="undef" SIGNAME="Branch_PC_0_branch_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="branch_pc"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/CZ_Control_Unit_0" HWVERSION="1.0" INSTANCE="CZ_Control_Unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CZ_Control_Unit" VLNV="xilinx.com:module_ref:CZ_Control_Unit:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_CZ_Control_Unit_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="C" SIGIS="undef" SIGNAME="Carry_and_Zero_flag_0_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="c"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Z" SIGIS="undef" SIGNAME="Carry_and_Zero_flag_0_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="z"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="carry_out_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="carry_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="alu_out_wb" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="alu_out_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CWrite_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_CWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="CWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ZWrite_wb" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_ZWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="ZWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="carry_out_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="carry_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="alu_out_mem" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="alu_out_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="dm_data_wb" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_dm_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="dm_data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="dm_data_mem" RIGHT="0" SIGIS="undef" SIGNAME="Data_memory_0_dm_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Data_memory_0" PORT="dm_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CWrite_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_CWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="CWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ZWrite_mem" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_ZWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="ZWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="C_final" SIGIS="undef" SIGNAME="CZ_Control_Unit_0_C_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="c"/>
+            <CONNECTION INSTANCE="Reg_Write_Control_0" PORT="c"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Z_final" SIGIS="undef" SIGNAME="CZ_Control_Unit_0_Z_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Reg_Write_Control_0" PORT="z"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Carry_and_Zero_flag_0" HWVERSION="1.0" INSTANCE="Carry_and_Zero_flag_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Carry_and_Zero_flag" VLNV="xilinx.com:module_ref:Carry_and_Zero_flag:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Carry_and_Zero_flag_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CWrite" SIGIS="undef" SIGNAME="MEM_WB_PR_0_CWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="CWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ZWrite" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_ZWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="ZWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="carry_in" SIGIS="undef" SIGNAME="MEM_WB_PR_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="carry_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="alu_in" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="alu_out_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="dm_data_in" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_dm_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="dm_data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c" SIGIS="undef" SIGNAME="Carry_and_Zero_flag_0_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_0"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="C"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="z" SIGIS="undef" SIGNAME="Carry_and_Zero_flag_0_z">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="z_0"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="Z"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Comparator_0" HWVERSION="1.0" INSTANCE="Comparator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Comparator" VLNV="xilinx.com:module_ref:Comparator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Comparator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="ra" RIGHT="0" SIGIS="undef" SIGNAME="RR_Forwarding_Unit_0_ra_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="ra_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="rb" RIGHT="0" SIGIS="undef" SIGNAME="RR_Forwarding_Unit_0_rb_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="rb_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ET" SIGIS="undef" SIGNAME="Comparator_0_ET">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="ET"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="LT" SIGIS="undef" SIGNAME="Comparator_0_LT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="LT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Data_memory_0" HWVERSION="1.0" INSTANCE="Data_memory_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Data_memory" VLNV="xilinx.com:module_ref:Data_memory:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="depth" VALUE="65536"/>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Data_memory_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="alu_out_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="write_data" RIGHT="0" SIGIS="undef" SIGNAME="Write_Data_Select_0_write_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Write_Data_Select_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemRead" SIGIS="undef" SIGNAME="EX_MEM_PR_0_MemRead_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="MemRead_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemWrite" SIGIS="undef" SIGNAME="EX_MEM_PR_0_MemWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="MemWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="dm_data" RIGHT="0" SIGIS="undef" SIGNAME="Data_memory_0_dm_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="dm_data_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="dm_data_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Destination_reg_sele_0" HWVERSION="1.0" INSTANCE="Destination_reg_sele_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Destination_reg_select" VLNV="xilinx.com:module_ref:Destination_reg_select:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Destination_reg_sele_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="2" NAME="RA" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RA_final_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RA_final_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RB" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RB_final_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RB_final_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RC" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="LM_reg" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_SM_reg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="SM_reg_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RD" RIGHT="0" SIGIS="undef" SIGNAME="Destination_reg_sele_0_RD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="RD_ex"/>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="RD_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="RegDst" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RegDst_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RegDst_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/EX_MEM_PR_0" HWVERSION="1.0" INSTANCE="EX_MEM_PR_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="EX_MEM_PR" VLNV="xilinx.com:module_ref:EX_MEM_PR:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_EX_MEM_PR_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="EX_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_EX_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="EX_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="EX_MEM_Write" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="alu_out_in" RIGHT="0" SIGIS="undef" SIGNAME="ALU_0_alu_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="alu_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD_in" RIGHT="0" SIGIS="undef" SIGNAME="Destination_reg_sele_0_RD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Destination_reg_sele_0" PORT="RD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_plus_2_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="PC_plus_2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="Imm2_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="Imm2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="ra_in" RIGHT="0" SIGIS="undef" SIGNAME="ALU_inputs_0_ra_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="ra_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="rb_in" RIGHT="0" SIGIS="undef" SIGNAME="ALU_inputs_0_rb_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="rb_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite_in" SIGIS="undef" SIGNAME="Reg_Write_Control_0_RegWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Reg_Write_Control_0" PORT="RegWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_in" SIGIS="undef" SIGNAME="RR_EX_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_in" SIGIS="undef" SIGNAME="RR_EX_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="S_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_in" SIGIS="undef" SIGNAME="RR_EX_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemRead_in" SIGIS="undef" SIGNAME="RR_EX_PR_0_MemRead_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="MemRead_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemWrite_in" SIGIS="undef" SIGNAME="RR_EX_PR_0_MemWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="MemWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="MemtoReg_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_MemtoReg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="MemtoReg_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CWrite_in" SIGIS="undef" SIGNAME="RR_EX_PR_0_CWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="CWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ZWrite_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_ZWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ZWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="carry_in" SIGIS="undef" SIGNAME="ALU_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_0" PORT="carry_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="alu_out_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="alu_out_mem"/>
+            <CONNECTION INSTANCE="Data_memory_0" PORT="addr"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="alu_out_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="alu_out_in"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="mem_addr_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RD_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="RD_mem"/>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="RD_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RD_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_plus_2_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="PC_plus_2_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="Imm2_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="Imm2_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="Imm2_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="ra_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_ra_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Write_Data_Select_0" PORT="ra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="rb_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_rb_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Write_Data_Select_0" PORT="rb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="PC_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="op_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="op_mem"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RegWrite_out" SIGIS="undef" SIGNAME="EX_MEM_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="RegWrite_mem"/>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="RegWrite_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RegWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="L_out" SIGIS="undef" SIGNAME="EX_MEM_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="L_mem"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="L_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="L_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_out" SIGIS="undef" SIGNAME="EX_MEM_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Write_Data_Select_0" PORT="S"/>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="S_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="S_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="invalid1_out" SIGIS="undef" SIGNAME="EX_MEM_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="invalid1_mem"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="invalid1_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="invalid1_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemRead_out" SIGIS="undef" SIGNAME="EX_MEM_PR_0_MemRead_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Data_memory_0" PORT="MemRead"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemWrite_out" SIGIS="undef" SIGNAME="EX_MEM_PR_0_MemWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Data_memory_0" PORT="MemWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="MemtoReg_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_MemtoReg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="MemtoReg_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="MemtoReg_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CWrite_out" SIGIS="undef" SIGNAME="EX_MEM_PR_0_CWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="CWrite_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="CWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="ZWrite_out" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_ZWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="ZWrite_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="ZWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="carry_out" SIGIS="undef" SIGNAME="EX_MEM_PR_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="carry_out_mem"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="carry_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Forwarding_unit_0" HWVERSION="1.0" INSTANCE="Forwarding_unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Forwarding_unit" VLNV="xilinx.com:module_ref:Forwarding_unit:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Forwarding_unit_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="2" NAME="RA" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RA_final_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RA_final_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RB" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RB_final_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RB_final_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD_mem" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD_wb" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="MemtoReg_mem" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_MemtoReg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="MemtoReg_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="forwardA" RIGHT="0" SIGIS="undef" SIGNAME="Forwarding_unit_0_forwardA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="forwardA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="forwardB" RIGHT="0" SIGIS="undef" SIGNAME="Forwarding_unit_0_forwardB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="forwardB"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Hazard_Detection_Unit_0" HWVERSION="1.0" INSTANCE="Hazard_Detection_Unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Hazard_Detection_Unit" VLNV="xilinx.com:module_ref:Hazard_Detection_Unit:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Hazard_Detection_Unit_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="op_rr" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op_ex" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="branch_rr" SIGIS="undef" SIGNAME="RR_Control_0_branch">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="branch"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="special_wb" SIGIS="undef" SIGNAME="Special_Control_0_special_wb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Special_Control_0" PORT="special_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="special_2" SIGIS="undef" SIGNAME="Special_2_Control_0_special_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Special_2_Control_0" PORT="special_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemRead_ex" SIGIS="undef" SIGNAME="RR_EX_PR_0_MemRead_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="MemRead_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD_ex" RIGHT="0" SIGIS="undef" SIGNAME="Destination_reg_sele_0_RD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Destination_reg_sele_0" PORT="RD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD_mem" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD_wb" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RA_RR" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RA_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RA_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RB_RR" RIGHT="0" SIGIS="undef" SIGNAME="RB_select_0_RB_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RB_select_0" PORT="RB_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L" SIGIS="undef" SIGNAME="RR_Control_0_L">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="L"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S" SIGIS="undef" SIGNAME="RR_Control_0_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="S"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_ex" SIGIS="undef" SIGNAME="RR_EX_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite_mem" SIGIS="undef" SIGNAME="EX_MEM_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="x" RIGHT="0" SIGIS="undef" SIGNAME="LM_and_SM_unit_0_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="PC_Write" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_PC_Write">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_Write"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="IF_Write" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_IF_Write">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="IF_ID_write"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ID_Write" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_ID_Write">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="ID_RR_write"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="stall" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_stall">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="stall_in"/>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="stall"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="IF_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_IF_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="IF_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ID_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_ID_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="ID_FLUSH"/>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="ID_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RR_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_RR_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RR_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="EX_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_EX_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="EX_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MEM_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_MEM_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="MEM_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ID_RR_PR_0" HWVERSION="1.0" INSTANCE="ID_RR_PR_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ID_RR_PR" VLNV="xilinx.com:module_ref:ID_RR_PR:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_ID_RR_PR_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ID_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_ID_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="ID_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ID_RR_write" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_ID_Write">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="ID_Write"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_in" RIGHT="0" SIGIS="undef" SIGNAME="IF_ID_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_plus_2_in" RIGHT="0" SIGIS="undef" SIGNAME="IF_ID_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="PC_plus_2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op_in" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_op">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="op"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RA_in" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_RA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="RA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RB_in" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_RB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="RB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RC_in" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_RC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="RC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="comp_in" SIGIS="undef" SIGNAME="Instruction_Decoder_0_comp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="comp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_in" SIGIS="undef" SIGNAME="IF_ID_PR_0_invalid1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="invalid1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="cz_in" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_cz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="cz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="Imm2_in" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_Imm2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="Imm2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="SE_Imm1_in" RIGHT="0" SIGIS="undef" SIGNAME="Sign_Extension_0_SE_Imm1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sign_Extension_0" PORT="SE_Imm1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="SE_Imm2_in" RIGHT="0" SIGIS="undef" SIGNAME="Sign_Extension_0_SE_Imm2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sign_Extension_0" PORT="SE_Imm2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="PC"/>
+            <CONNECTION INSTANCE="Registers_0" PORT="PC_in"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="PC_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_plus_2_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="PC_plus_2_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="op_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RB_select_0" PORT="op"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="op_rr"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="op_in"/>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="op"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RA_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RA_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="RA_RR"/>
+            <CONNECTION INSTANCE="Registers_0" PORT="RA_in"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RA_final_in"/>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="RA_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RB_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RB_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RB_select_0" PORT="RB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RC_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RC_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="comp_out" SIGIS="undef" SIGNAME="ID_RR_PR_0_comp_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="comp_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="invalid1_out" SIGIS="undef" SIGNAME="ID_RR_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="invalid1_in"/>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="invalid1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="cz_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_cz_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="cz_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="Imm2_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="Imm2"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="Imm2_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="SE_Imm1_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_SE_Imm1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="SE_Imm1"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="SE_Imm1_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="SE_Imm2_out" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_SE_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="SE_Imm2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/IF_ID_PR_0" HWVERSION="1.0" INSTANCE="IF_ID_PR_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="IF_ID_PR" VLNV="xilinx.com:module_ref:IF_ID_PR:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_IF_ID_PR_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="IF_ID_write" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_IF_Write">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="IF_Write"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="IF_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_IF_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="IF_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_in" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_plus_2_in" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_plus_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_plus_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="instr_in" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Memory_0_instr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Memory_0" PORT="instr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_out" RIGHT="0" SIGIS="undef" SIGNAME="IF_ID_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="PC_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_plus_2_out" RIGHT="0" SIGIS="undef" SIGNAME="IF_ID_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="PC_plus_2_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="instr_out" RIGHT="0" SIGIS="undef" SIGNAME="IF_ID_PR_0_instr_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="instr_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="invalid1" SIGIS="undef" SIGNAME="IF_ID_PR_0_invalid1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="invalid1_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Instruction_Decoder_0" HWVERSION="1.0" INSTANCE="Instruction_Decoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Instruction_Decoder" VLNV="xilinx.com:module_ref:Instruction_Decoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Instruction_Decoder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="instr_in" RIGHT="0" SIGIS="undef" SIGNAME="IF_ID_PR_0_instr_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="instr_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ID_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_ID_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="ID_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="op" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_op">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="op_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RA" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_RA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RA_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RB" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_RB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RB_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RC" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_RC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RC_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="comp" SIGIS="undef" SIGNAME="Instruction_Decoder_0_comp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="comp_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="cz" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_cz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="cz_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="Imm1" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_Imm1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sign_Extension_0" PORT="Imm1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="Imm2" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_Imm2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sign_Extension_0" PORT="Imm2"/>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="Imm2_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Instruction_Memory_0" HWVERSION="1.0" INSTANCE="Instruction_Memory_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Instruction_Memory" VLNV="xilinx.com:module_ref:Instruction_Memory:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="depth" VALUE="65536"/>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Instruction_Memory_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="instr" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Memory_0_instr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="instr_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/LM_and_SM_unit_0" HWVERSION="1.0" INSTANCE="LM_and_SM_unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="LM_and_SM_unit" VLNV="xilinx.com:module_ref:LM_and_SM_unit:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_LM_and_SM_unit_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="L_ex" SIGIS="undef" SIGNAME="RR_EX_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_ex" SIGIS="undef" SIGNAME="RR_EX_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="S_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="i_ex" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_i_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="i_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="Imm2" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="Imm2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L" SIGIS="undef" SIGNAME="RR_Control_0_L">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="L"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S" SIGIS="undef" SIGNAME="RR_Control_0_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="S"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="i" RIGHT="0" SIGIS="undef" SIGNAME="LM_and_SM_unit_0_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RB_select_0" PORT="i"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="i_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="x" RIGHT="0" SIGIS="undef" SIGNAME="LM_and_SM_unit_0_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="x"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="x_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/MEM_WB_PR_0" HWVERSION="1.0" INSTANCE="MEM_WB_PR_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="MEM_WB_PR" VLNV="xilinx.com:module_ref:MEM_WB_PR:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_MEM_WB_PR_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MEM_WB_Write" SIGIS="undef" SIGNAME="xlconstant_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_2" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MEM_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_MEM_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="MEM_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="dm_data_in" RIGHT="0" SIGIS="undef" SIGNAME="Data_memory_0_dm_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Data_memory_0" PORT="dm_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_plus_2_in" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="PC_plus_2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="Imm2_in" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="Imm2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="alu_out_in" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="alu_out_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_in" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="MemtoReg_in" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_MemtoReg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="MemtoReg_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD_in" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_in" SIGIS="undef" SIGNAME="EX_MEM_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_in" SIGIS="undef" SIGNAME="EX_MEM_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="S_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite_in" SIGIS="undef" SIGNAME="EX_MEM_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_in" SIGIS="undef" SIGNAME="EX_MEM_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CWrite_in" SIGIS="undef" SIGNAME="EX_MEM_PR_0_CWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="CWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ZWrite_in" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_ZWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="ZWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="carry_in" SIGIS="undef" SIGNAME="EX_MEM_PR_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="carry_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="mem_data_in" RIGHT="0" SIGIS="undef" SIGNAME="Write_Data_Select_0_write_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Write_Data_Select_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="mem_addr_in" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="alu_out_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="dm_data_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_dm_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="dm_data"/>
+            <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="dm_data_in"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="dm_data_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_plus_2_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="PC_plus_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="Imm2_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="Imm2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="alu_out_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="alu_out"/>
+            <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="alu_in"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="alu_out_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="PC_out_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="MemtoReg_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_MemtoReg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="MemtoReg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RD_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Load_address"/>
+            <CONNECTION INSTANCE="Special_Control_0" PORT="RD"/>
+            <CONNECTION INSTANCE="Special_2_Control_0" PORT="RD_wb"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="RD_wb"/>
+            <CONNECTION INSTANCE="Registers_0" PORT="RD"/>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="RD_wb"/>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="RD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="L_out" SIGIS="undef" SIGNAME="MEM_WB_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Special_Control_0" PORT="L"/>
+            <CONNECTION INSTANCE="Special_2_Control_0" PORT="L_wb"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="L_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_out" SIGIS="undef" SIGNAME="MEM_WB_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Special_Control_0" PORT="S"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RegWrite_out" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Special_Control_0" PORT="RegWrite"/>
+            <CONNECTION INSTANCE="Special_2_Control_0" PORT="RegWrite_wb"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="RegWrite_wb"/>
+            <CONNECTION INSTANCE="Registers_0" PORT="RegWrite"/>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="RegWrite_wb"/>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="RegWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="invalid1_out" SIGIS="undef" SIGNAME="MEM_WB_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="invalid1_wb"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="invalid1_wb"/>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="invalid1_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CWrite_out" SIGIS="undef" SIGNAME="MEM_WB_PR_0_CWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="CWrite"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="CWrite_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="ZWrite_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_ZWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="ZWrite"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="ZWrite_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="carry_out" SIGIS="undef" SIGNAME="MEM_WB_PR_0_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Carry_and_Zero_flag_0" PORT="carry_in"/>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="carry_out_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="mem_data_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_mem_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Store_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="mem_addr_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_mem_addr_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Store_address"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/PC_0" HWVERSION="1.0" INSTANCE="PC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PC" VLNV="xilinx.com:module_ref:PC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="BOOT_ADDRESS" VALUE="0x0000"/>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_PC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="branch_rr" SIGIS="undef" SIGNAME="RR_Control_0_branch">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="branch"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="special_wb" SIGIS="undef" SIGNAME="Special_Control_0_special_wb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Special_Control_0" PORT="special_wb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="PC_Write" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_PC_Write">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="PC_Write"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="write_data_rr" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_write_data_rr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Registers_0" PORT="write_data_rr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="branch_pc" RIGHT="0" SIGIS="undef" SIGNAME="Branch_PC_0_branch_pc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="branch_pc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_in" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_in"/>
+            <CONNECTION INSTANCE="Instruction_Memory_0" PORT="PC"/>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="PC_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_plus_2" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_plus_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="IF_ID_PR_0" PORT="PC_plus_2_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/RB_select_0" HWVERSION="1.0" INSTANCE="RB_select_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RB_select" VLNV="xilinx.com:module_ref:RB_select:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_RB_select_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="2" NAME="RB" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RB_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RB_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="i" RIGHT="0" SIGIS="undef" SIGNAME="LM_and_SM_unit_0_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="SM_reg" RIGHT="0" SIGIS="undef" SIGNAME="RB_select_0_SM_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="SM_reg_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RB_final" RIGHT="0" SIGIS="undef" SIGNAME="RB_select_0_RB_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="RB_RR"/>
+            <CONNECTION INSTANCE="Registers_0" PORT="RB_in"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RB_final_in"/>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="RB_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/RR_Control_0" HWVERSION="1.0" INSTANCE="RR_Control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RR_Control" VLNV="xilinx.com:module_ref:RR_Control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_RR_Control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="op" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ET" SIGIS="undef" SIGNAME="Comparator_0_ET">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Comparator_0" PORT="ET"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="LT" SIGIS="undef" SIGNAME="Comparator_0_LT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Comparator_0" PORT="LT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="stall" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_stall">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="stall"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1" SIGIS="undef" SIGNAME="ID_RR_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ALUSrc1" SIGIS="undef" SIGNAME="RR_Control_0_ALUSrc1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ALUSrc1_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ALUSrc2" SIGIS="undef" SIGNAME="RR_Control_0_ALUSrc2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ALUSrc2_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ALUOp" SIGIS="undef" SIGNAME="RR_Control_0_ALUOp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ALUOp_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="RegDst" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_RegDst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RegDst_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemRead" SIGIS="undef" SIGNAME="RR_Control_0_MemRead">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="MemRead_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemWrite" SIGIS="undef" SIGNAME="RR_Control_0_MemWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="MemWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="MemtoReg" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_MemtoReg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="MemtoReg_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="L" SIGIS="undef" SIGNAME="RR_Control_0_L">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="L"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="L"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="L_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S" SIGIS="undef" SIGNAME="RR_Control_0_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="S"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="S"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="S_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S3" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_S3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="S3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S2" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_S2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="S2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S1" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_S1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="S1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="branch" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_branch">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="branch_rr"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="branch_rr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CWrite" SIGIS="undef" SIGNAME="RR_Control_0_CWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="CWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="ZWrite" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_ZWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ZWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/RR_EX_PR_0" HWVERSION="1.0" INSTANCE="RR_EX_PR_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RR_EX_PR" VLNV="xilinx.com:module_ref:RR_EX_PR:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_RR_EX_PR_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RR_EX_Write" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RR_FLUSH" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_RR_FLUSH">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="RR_FLUSH"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="i_in" RIGHT="0" SIGIS="undef" SIGNAME="LM_and_SM_unit_0_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="x_in" RIGHT="0" SIGIS="undef" SIGNAME="LM_and_SM_unit_0_x">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="x"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_plus_2_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="PC_plus_2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ALUSrc1_in" SIGIS="undef" SIGNAME="RR_Control_0_ALUSrc1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="ALUSrc1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ALUSrc2_in" SIGIS="undef" SIGNAME="RR_Control_0_ALUSrc2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="ALUSrc2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ALUOp_in" SIGIS="undef" SIGNAME="RR_Control_0_ALUOp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="ALUOp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemRead_in" SIGIS="undef" SIGNAME="RR_Control_0_MemRead">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="MemRead"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemWrite_in" SIGIS="undef" SIGNAME="RR_Control_0_MemWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="MemWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="RegDst_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_RegDst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="RegDst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="MemtoReg_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_MemtoReg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="MemtoReg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_in" SIGIS="undef" SIGNAME="RR_Control_0_L">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="L"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S_in" SIGIS="undef" SIGNAME="RR_Control_0_S">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="S"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="stall_in" SIGIS="undef" SIGNAME="Hazard_Detection_Unit_0_stall">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="stall"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_in" SIGIS="undef" SIGNAME="ID_RR_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RA_final_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RA_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RA_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RB_final_in" RIGHT="0" SIGIS="undef" SIGNAME="RB_select_0_RB_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RB_select_0" PORT="RB_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RC_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="ra_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_Forwarding_Unit_0_ra_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="ra_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="rb_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_Forwarding_Unit_0_rb_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="rb_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="SE_Imm1_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_SE_Imm1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="SE_Imm1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="Imm2_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="Imm2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="comp_in" SIGIS="undef" SIGNAME="ID_RR_PR_0_comp_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="comp_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="cz_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_cz_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="cz_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="SM_reg_in" RIGHT="0" SIGIS="undef" SIGNAME="RB_select_0_SM_reg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RB_select_0" PORT="SM_reg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="CWrite_in" SIGIS="undef" SIGNAME="RR_Control_0_CWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="CWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ZWrite_in" RIGHT="0" SIGIS="undef" SIGNAME="RR_Control_0_ZWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Control_0" PORT="ZWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="i_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_i_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="i_ex"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="x_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_x_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Special_2_Control_0" PORT="x_ex"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="PC_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="PC_plus_2_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="PC_plus_2_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ALUSrc1_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_ALUSrc1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="ALUSrc1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ALUSrc2_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_ALUSrc2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="ALUSrc2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ALUOp_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_ALUOp_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_Control_unit_0" PORT="ALUOp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemRead_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_MemRead_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="MemRead_ex"/>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="MemRead_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemWrite_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_MemWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="MemWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="RegDst_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RegDst_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Destination_reg_sele_0" PORT="RegDst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="MemtoReg_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_MemtoReg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="MemtoReg_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="L_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="L"/>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="L_ex"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="L_ex"/>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="L_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="S"/>
+            <CONNECTION INSTANCE="LM_and_SM_unit_0" PORT="S_ex"/>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="S_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="stall_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_stall_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Reg_Write_Control_0" PORT="stall"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="invalid1_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="invalid1_in"/>
+            <CONNECTION INSTANCE="Reg_Write_Control_0" PORT="invalid1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RA_final_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RA_final_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Destination_reg_sele_0" PORT="RA"/>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="RA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RB_final_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RB_final_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Destination_reg_sele_0" PORT="RB"/>
+            <CONNECTION INSTANCE="Forwarding_unit_0" PORT="RB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="RC_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_RC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Destination_reg_sele_0" PORT="RC"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="ra_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_ra_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="ra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="rb_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_rb_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="rb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="SE_Imm1_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_SE_Imm1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="SE_Imm1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="op_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_Control_unit_0" PORT="opcode"/>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="op"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="op_ex"/>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="op_in"/>
+            <CONNECTION INSTANCE="Reg_Write_Control_0" PORT="op"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="Imm2_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="Imm2_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="comp_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_comp_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="comp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="cz_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_cz_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALU_Control_unit_0" PORT="cz"/>
+            <CONNECTION INSTANCE="Reg_Write_Control_0" PORT="cz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="SM_reg_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_SM_reg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Destination_reg_sele_0" PORT="LM_reg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="CWrite_out" SIGIS="undef" SIGNAME="RR_EX_PR_0_CWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="CWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="ZWrite_out" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_ZWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="ZWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/RR_Forwarding_Unit_0" HWVERSION="1.0" INSTANCE="RR_Forwarding_Unit_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="RR_Forwarding_Unit" VLNV="xilinx.com:module_ref:RR_Forwarding_Unit:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_RR_Forwarding_Unit_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="2" NAME="RA_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RA_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RA_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RB_in" RIGHT="0" SIGIS="undef" SIGNAME="RB_select_0_RB_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RB_select_0" PORT="RB_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="write_data" RIGHT="0" SIGIS="undef" SIGNAME="WB_mux_0_write_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="ra" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_ra">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Registers_0" PORT="ra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="rb" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_rb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Registers_0" PORT="rb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="ra_final" RIGHT="0" SIGIS="undef" SIGNAME="RR_Forwarding_Unit_0_ra_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Comparator_0" PORT="ra"/>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="ra"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="ra_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="rb_final" RIGHT="0" SIGIS="undef" SIGNAME="RR_Forwarding_Unit_0_rb_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Comparator_0" PORT="rb"/>
+            <CONNECTION INSTANCE="Branch_PC_0" PORT="rb"/>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="rb_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Reg_Write_Control_0" HWVERSION="1.0" INSTANCE="Reg_Write_Control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Reg_Write_Control" VLNV="xilinx.com:module_ref:Reg_Write_Control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Reg_Write_Control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="stall" SIGIS="undef" SIGNAME="RR_EX_PR_0_stall_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="stall_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="invalid1" SIGIS="undef" SIGNAME="RR_EX_PR_0_invalid1_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="invalid1_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="op" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_op_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="op_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="c" SIGIS="undef" SIGNAME="CZ_Control_Unit_0_C_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="C_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="z" SIGIS="undef" SIGNAME="CZ_Control_Unit_0_Z_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CZ_Control_Unit_0" PORT="Z_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="cz" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_cz_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="cz_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RegWrite" SIGIS="undef" SIGNAME="Reg_Write_Control_0_RegWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="RegWrite_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Registers_0" HWVERSION="1.0" INSTANCE="Registers_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Registers" VLNV="xilinx.com:module_ref:Registers:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Registers_0_5"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RA_in" RIGHT="0" SIGIS="undef" SIGNAME="ID_RR_PR_0_RA_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="RA_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RB_in" RIGHT="0" SIGIS="undef" SIGNAME="RB_select_0_RB_final">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RB_select_0" PORT="RB_final"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="write_data" RIGHT="0" SIGIS="undef" SIGNAME="WB_mux_0_write_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="write_data_wb" RIGHT="0" SIGIS="undef" SIGNAME="WB_mux_0_write_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="WB_mux_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="ra" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_ra">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="ra"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="rb" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_rb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="rb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="write_data_rr" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_write_data_rr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="write_data_rr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="R0" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R0_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="R1" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R1_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="R2" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R2_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="R3" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R3_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="R4" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R4_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="R5" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R5_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="R6" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R6_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="R7" RIGHT="0" SIGIS="undef" SIGNAME="Registers_0_R7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="R7_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Sign_Extension_0" HWVERSION="1.0" INSTANCE="Sign_Extension_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Sign_Extension" VLNV="xilinx.com:module_ref:Sign_Extension:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Sign_Extension_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="Imm1" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_Imm1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="Imm1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="Imm2" RIGHT="0" SIGIS="undef" SIGNAME="Instruction_Decoder_0_Imm2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Instruction_Decoder_0" PORT="Imm2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="SE_Imm1" RIGHT="0" SIGIS="undef" SIGNAME="Sign_Extension_0_SE_Imm1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="SE_Imm1_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="SE_Imm2" RIGHT="0" SIGIS="undef" SIGNAME="Sign_Extension_0_SE_Imm2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ID_RR_PR_0" PORT="SE_Imm2_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Special_2_Control_0" HWVERSION="1.0" INSTANCE="Special_2_Control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Special_2_Control" VLNV="xilinx.com:module_ref:Special_2_Control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Special_2_Control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="x_ex" RIGHT="0" SIGIS="undef" SIGNAME="RR_EX_PR_0_x_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="x_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="RD_wb" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L_wb" SIGIS="undef" SIGNAME="MEM_WB_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="special_2" SIGIS="undef" SIGNAME="Special_2_Control_0_special_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="special_2"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Special_Control_0" HWVERSION="1.0" INSTANCE="Special_Control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Special_Control" VLNV="xilinx.com:module_ref:Special_Control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Special_Control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="2" NAME="RD" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RD_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RD_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite" SIGIS="undef" SIGNAME="MEM_WB_PR_0_RegWrite_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="RegWrite_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="L" SIGIS="undef" SIGNAME="MEM_WB_PR_0_L_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="L_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S" SIGIS="undef" SIGNAME="MEM_WB_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="S_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="special_wb" SIGIS="undef" SIGNAME="Special_Control_0_special_wb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="special_wb"/>
+            <CONNECTION INSTANCE="Hazard_Detection_Unit_0" PORT="special_wb"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/WB_mux_0" HWVERSION="1.0" INSTANCE="WB_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="WB_mux" VLNV="xilinx.com:module_ref:WB_mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_WB_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="MemtoReg" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_MemtoReg_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="MemtoReg_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="alu_out" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_alu_out_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="alu_out_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="dm_data" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_dm_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="dm_data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="PC_plus_2" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_PC_plus_2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="PC_plus_2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="8" NAME="Imm2" RIGHT="0" SIGIS="undef" SIGNAME="MEM_WB_PR_0_Imm2_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="Imm2_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="write_data" RIGHT="0" SIGIS="undef" SIGNAME="WB_mux_0_write_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Load_data"/>
+            <CONNECTION INSTANCE="ALU_inputs_0" PORT="write_data_wb"/>
+            <CONNECTION INSTANCE="Registers_0" PORT="write_data"/>
+            <CONNECTION INSTANCE="Registers_0" PORT="write_data_wb"/>
+            <CONNECTION INSTANCE="RR_Forwarding_Unit_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Write_Data_Select_0" HWVERSION="1.0" INSTANCE="Write_Data_Select_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Write_Data_Select" VLNV="xilinx.com:module_ref:Write_Data_Select:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_Write_Data_Select_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="ra" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_ra_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="ra_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="rb" RIGHT="0" SIGIS="undef" SIGNAME="EX_MEM_PR_0_rb_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="rb_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S" SIGIS="undef" SIGNAME="EX_MEM_PR_0_S_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="S_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="write_data" RIGHT="0" SIGIS="undef" SIGNAME="Write_Data_Select_0_write_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Data_memory_0" PORT="write_data"/>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="mem_data_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="6" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="RR_EX_PR_0" PORT="RR_EX_Write"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="6" FULLNAME="/xlconstant_1" HWVERSION="1.1" INSTANCE="xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_xlconstant_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="EX_MEM_PR_0" PORT="EX_MEM_Write"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="6" FULLNAME="/xlconstant_2" HWVERSION="1.1" INSTANCE="xlconstant_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
+        <PARAMETER NAME="Component_Name" VALUE="IITB_RISC_xlconstant_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="MEM_WB_PR_0" PORT="MEM_WB_Write"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
