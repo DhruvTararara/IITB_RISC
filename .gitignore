@@ -1,0 +1,10 @@
+*.log 
+*.jou 
+*.str 
+*.cache/ 
+*.hw/ 
+*.ip_user_files/ 
+*.sim/ 
+*.xpr 
+usage_statistics_webtalk/ 
+webtalk/ 
